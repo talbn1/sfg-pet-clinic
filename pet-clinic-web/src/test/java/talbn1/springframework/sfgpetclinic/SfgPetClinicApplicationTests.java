@@ -1,13 +1,16 @@
 package talbn1.springframework.sfgpetclinic;
 
+
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+
 @SpringBootTest
-class SfgPetClinicApplicationTests {
+public class SfgPetClinicApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
     }
 
 }
