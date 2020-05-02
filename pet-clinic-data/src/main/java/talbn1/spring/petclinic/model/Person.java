@@ -1,4 +1,4 @@
-package talbn1.springframework.sfgpetclinic.model;
+package talbn1.spring.petclinic.model;
 
 
 
