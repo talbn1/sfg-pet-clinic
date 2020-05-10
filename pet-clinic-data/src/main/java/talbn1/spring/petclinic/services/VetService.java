@@ -1,9 +1,9 @@
 package talbn1.spring.petclinic.services;
 
+import org.springframework.stereotype.Service;
 import talbn1.spring.petclinic.model.Vet;
 
-import java.util.Set;
-
+@Service
 public interface VetService extends CrudService<Vet, Long>{
 
     Vet findBylastName(String lastName);

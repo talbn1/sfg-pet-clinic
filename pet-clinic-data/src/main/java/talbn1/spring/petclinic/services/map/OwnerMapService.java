@@ -1,11 +1,14 @@
 package talbn1.spring.petclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import talbn1.spring.petclinic.model.Owner;
-import talbn1.spring.petclinic.services.CrudService;
+import talbn1.spring.petclinic.services.OwnerService;
 
+import java.util.List;
 import java.util.Set;
 
-public class OwnerMapService extends AbstractMapService<Owner,Long> implements CrudService<Owner,Long> {
+@Service
+public class OwnerMapService extends AbstractMapService<Owner,Long> implements OwnerService{
 
 
     @Override
@@ -31,5 +34,15 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements C
     @Override
     public Owner findById(Long id) {
         return super.findById(id);
+    }
+
+    @Override
+    public Owner findBylastName(String lastName) {
+        return null;
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        return null;
     }
 }
