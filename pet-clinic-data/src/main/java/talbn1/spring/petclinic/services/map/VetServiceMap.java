@@ -36,8 +36,4 @@ public class VetServiceMap
         return super.findById(id);
     }
 
-    @Override
-    public Vet findBylastName(String lastName) {
-        return null;
-    }
 }

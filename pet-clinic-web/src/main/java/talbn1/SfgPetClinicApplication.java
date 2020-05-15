@@ -1,7 +1,8 @@
-package talbn1.springframework.sfgpetclinic;
+package talbn1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 @SpringBootApplication
 public class SfgPetClinicApplication {

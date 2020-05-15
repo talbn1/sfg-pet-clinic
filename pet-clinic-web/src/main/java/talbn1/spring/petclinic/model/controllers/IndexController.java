@@ -1,4 +1,4 @@
-package talbn1.springframework.sfgpetclinic.controllers;
+package talbn1.spring.petclinic.model.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
