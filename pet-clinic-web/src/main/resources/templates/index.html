@@ -1,28 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout::layout(~{::body},'home')}">
 <head>
     <meta charset="UTF-8"/>
-    <title>List of Vets</title>
+    <title>Index Page</title>
 </head>
 <body>
-<!--/*@thymesVar id="vet" type="talbn1.spring.petclinic.model.Vet"*/-->
-<h2 th:text="'List of Vets'">Owners List</h2>
+<h2 th:text="#{welcome}">Welcome</h2>
 
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-    </tr>
-    </thead>
-    <tbody>
+<div class="row">
+    <div class="col-md-12">
+        <img class="img-responsive" src="../static.resources.images.pets.png" th:src="@{/resources/images/pets.png}"/>
+    </div>
+</div>
 
-    <!--/*@thymesVar id="vets" type="talbn1.spring.petclinic.model.Vet"*/-->
-    <tr th:each="vet : ${vets}">
-        <td th:text="${
-    </tr>
-    </tbody>
-</table>
 </body>
 </html>
