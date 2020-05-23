@@ -3,8 +3,10 @@ package talbn1.spring.petclinic.model.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import talbn1.spring.petclinic.model.Owner;
+import talbn1.spring.petclinic.model.PetType;
 import talbn1.spring.petclinic.model.Vet;
 import talbn1.spring.petclinic.services.OwnerService;
+import talbn1.spring.petclinic.services.PetTypeService;
 import talbn1.spring.petclinic.services.VetService;
 
 
@@ -14,11 +16,13 @@ public class DataLoader implements CommandLineRunner  {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
 
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
 
@@ -30,6 +34,15 @@ public class DataLoader implements CommandLineRunner  {
     }
 
     private void loadData() {
+
+
+        PetType dog = new PetType();
+        dog.setName("dog");
+        PetType savedDogType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        dog.setName("cat");
+        PetType savedCatType = petTypeService.save(cat);
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
