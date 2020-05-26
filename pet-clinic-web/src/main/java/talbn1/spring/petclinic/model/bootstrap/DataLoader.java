@@ -3,6 +3,7 @@ package talbn1.spring.petclinic.model.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import talbn1.spring.petclinic.model.Owner;
+import talbn1.spring.petclinic.model.Pet;
 import talbn1.spring.petclinic.model.PetType;
 import talbn1.spring.petclinic.model.Vet;
 import talbn1.spring.petclinic.services.OwnerService;
@@ -50,6 +51,11 @@ public class DataLoader implements CommandLineRunner  {
         owner1.setAddress("122 Moav");
         owner1.setCity("Arad");
         owner1.setTelephpne("123456789");
+        Pet p1 = new Pet();
+        p1.setPetType(savedDogType);
+        p1.setOwner(owner1);
+        p1.setName("lasi");
+        owner1.getPets().add(p1);
 
         ownerService.save(owner1);
 
@@ -59,6 +65,11 @@ public class DataLoader implements CommandLineRunner  {
         owner2.setAddress("331 Moav");
         owner2.setCity("Beer Sheva");
         owner2.setTelephpne("123444444");
+        Pet p2 = new Pet();
+        p2.setPetType(savedCatType);
+        p2.setOwner(owner2);
+        p2.setName("mitsi");
+        owner2.getPets().add(p2);
 
         ownerService.save(owner2);
 
