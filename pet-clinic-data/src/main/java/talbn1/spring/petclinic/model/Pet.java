@@ -1,13 +1,26 @@
 package talbn1.spring.petclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+//table name = is telling hibername that this is the tablename corralte with entity
+@Table(name = "pets")
 public class Pet extends BaseEntity{
 
-    private PetType petType;
-    private Owner owner;
-    private LocalDate date;
+
+    //when we have @joinColumn, we need to define relation in the oterside
+
+    @Column(name = "name")
     private String name;
+    @JoinColumn(name = "type_id")
+    private PetType petType;
+    @ManyToOne
+    @JoinColumn(name = "owners_id")
+    private Owner owner;
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
+
 
     public String getName() {
         return name;
@@ -33,11 +46,11 @@ public class Pet extends BaseEntity{
         this.owner = owner;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 }
