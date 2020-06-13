@@ -39,7 +39,7 @@ public class Owner extends Person{
         return telephpne;
     }
 
-    public void setTelephpne(String telephpne) {
+    public void setTelephone(String telephpne) {
         this.telephpne = telephpne;
     }
     public Set<Pet> getPets() {
